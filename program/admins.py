@@ -135,9 +135,9 @@ async def skip(c: Client, m: Message):
     chat_id = m.chat.id
     queue = await skip_current_song(chat_id)
     if queue == 0:
-        await m.reply_text("💕 لا يوجد اغنيه شغاله"")
+        await m.reply_text("💕 لا يوجد اغنيه شغاله")
     elif queue == 1:
-        await m.reply_text("💕 لا يوجد اغنيه شغاله"")
+        await m.reply_text("💕 لا يوجد اغنيه شغاله")
     elif queue == 2:
         await m.reply_text("🗑️ تم مسح**الانتضار**\n\n» **والمساعد** غادر الدردشة الصوتية.")
     else:
@@ -201,7 +201,7 @@ async def unmute(client, m: Message):
             traceback.print_exc()
             await m.reply_text(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply_text("💕 لا يوجد اغنيه شغاله"")
+        await m.reply_text("💕 لا يوجد اغنيه شغاله")
 
 
 @Client.on_message(
