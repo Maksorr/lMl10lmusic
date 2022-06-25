@@ -124,7 +124,7 @@ async def resume(client, m: Message):
             traceback.print_exc()
             await m.reply_text(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply_text("💕 لا يوجد اغنيه شغاله"")
+        await m.reply_text("💕 لا يوجد اغنيه شغاله")
 
 
 @Client.on_message(command(["تخطي", f"/skip", "التالي"]) & other_filters)
