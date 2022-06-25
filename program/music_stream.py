@@ -132,10 +132,10 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             await m.reply_photo(
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"-› **اެبشࢪ عيني ضفتها ݪݪانتضاࢪ -› ** `{pos}`\n\n"
-                        f"-› **اެݪاسم:** [{songname}]({link}) | `الاغنية`\n"
-                        f"-› **اެݪمدةه:** `{duration}`\n"
-                        f"-› **طݪب اެݪحݪۅ:** {requester}",
+                caption=f"-› **تم الاضافه الي قائمه الانتظار -› ** `{pos}`\n\n"
+                        f"-› **الاسم:** [{songname}]({link}) | `الاغنية`\n"
+                        f"-› **المدةه:** `{duration}`\n"
+                        f"-› **طلب من:** {requester}",
             )
             remove_if_exists(image)
         else:
@@ -165,7 +165,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                 await m.reply_photo(
                     photo=image,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"-› **اެݪاسم:** [{songname}]({link}) | `music`\n"
+                    caption=f"-› **اݪاسم:** [{songname}]({link}) | `music`\n"
                             f"-› **اެݪمدةه:** `{duration}`\n"
                             f"-› **طݪب اެݪحݪۅ:** {requester}",
                 )
@@ -182,7 +182,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
         )
 
 
-@Client.on_message(command(["شغل", f"ت"]) & other_filters)
+@Client.on_message(command(["تشغيل", f"شغل"]) & other_filters)
 @check_blacklist()
 @require_admin(permissions=["can_manage_voice_chats", "can_delete_messages", "can_invite_users"], self=True)
 async def audio_stream(c: Client, m: Message):
