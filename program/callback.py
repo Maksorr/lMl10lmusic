@@ -39,20 +39,20 @@ from config import (
 async def start_set(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
-        f"""ههݪاެ حبيب [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ❤️‍🔥\n
-اެناެ بَۅت بَمميࢪ࣪اެتَ متَعدَدةَ ݪتشغِيݪ اެݪاغاެنِي فَي اެݪمَجمَۅعاتَ 🥇.
+        f"""مرحبا [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ❤️‍🔥\n
+انا بوت بمميزات متتعدده لتشغيل الاغاني في المجموعات 🥇.
 
--› [ᔕOᑌᖇᑕE ᒍEᑭTᕼOᑎ 𖢅](http://t.me/Jepthon)
+-› [Source channel 𖢅](https://t.me/D_o_m_A12)
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🥇 اެضفني اެݪى مجمۅعتَك 🥇", url=f"https://t.me/{me_bot.username}?startgroup=true")
+                    InlineKeyboardButton("🥇 اضفني الى مجمۅعتك 🥇", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
-                    InlineKeyboardButton("طࢪيقة اެݪتشغيݪ", callback_data="user_guide")
+                    InlineKeyboardButton("طريقه الشتغيل", callback_data="user_guide")
                 ],[
-                    InlineKeyboardButton(" اެݪاۅاެمࢪ", callback_data="command_list"),
-                    InlineKeyboardButton("🦎 اެݪمطَۅࢪ", url=f"https://t.me/{OWNER_USERNAME}")
+                    InlineKeyboardButton(" االاوامر", callback_data="command_list"),
+                    InlineKeyboardButton("المطور", url=f"https://t.me/{OWNER_USERNAME}")
                 ],
             ]
         ),
@@ -68,16 +68,16 @@ async def guide_set(_, query: CallbackQuery):
         f"""طريقة التشغيل ، تابع في الاسفل ↓
 
 1-› أولا ، أضفني الى مجموعتك
-2-› بعد ذالك قم برفعي كمشرف واعطائي صلاحيات مثل باقي البشر.
+2-› بعد ذالك قم برفعي كمشرف واعطائي الصلاحيات.
 3-› بعد ذالك اكتب `تحديث` بيانات البوت
-3-› اضف سيدي ومولاي @{me_user.username} في مجموعتك او اكتب `انضم او ادخل` لدعوة المساعد
-4-› اذ لم تستطيع اضافة المساعد او واجهت مشاكل تحدث مع رئيس الوزراء  .
+3-› @{me_user.username} في مجموعتك او اكتب `انضم او ادخل` لدعوة المساعد
+4-› @lMl4ll اذ لم تستطيع اضافة المساعد او واجهت مشاكل تحدث مع .
 
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("-› ࢪجَۅعَ", callback_data="home_start")
+                    InlineKeyboardButton("-› رجوع", callback_data="home_start")
                 ],
             ]
         ),
@@ -98,7 +98,7 @@ async def commands_set(_, query: CallbackQuery):
                 [
                     InlineKeyboardButton("-› اوامر البوت", callback_data="user_command"),
                 ],[             
-                    InlineKeyboardButton("-› ࢪجَۅعَ", callback_data="home_start")
+                    InlineKeyboardButton("-› رجوع", callback_data="home_start")
                 ],
             ]
         ),
@@ -112,7 +112,7 @@ async def user_set(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""- تابع الاوامر في الاسفل ↓
 
--› شغل - بالرد على ملف صوتي او اسم أغنيه
+-› تشغيل - بالرد على ملف صوتي او اسم أغنيه
 -› اصعد - لصعود حساب المساعد في المكالمة
 -› انزل - لنزول المساعد من المكالمة
 -› تخطي - لتخطي اغنية في التشغيل
@@ -130,9 +130,9 @@ async def user_set(_, query: CallbackQuery):
 -› انضم - لدعوة حساب المساعد
 -› اطلع - لخروج حساب المساعد من المجموعه
 
-. شكراً لقرائتك الاوامر - أتمنى لك يوماً تعيساً 🦴 """,
+. شكراً لقرائتك الاوامر أتمنى لك يوما سعيدا """,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("-› ࢪجَۅعَ", callback_data="command_list")]]
+            [[InlineKeyboardButton("-› رجوع", callback_data="command_list")]]
         ),
     )
 
