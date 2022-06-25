@@ -56,9 +56,9 @@ async def join_chat(c: Client, m: Message):
             )
         await user.join_chat(invitelink)
         await remove_active_chat(chat_id)
-        return await user.send_message(chat_id, "✅ فرحان هوايه لان دزيتولي دعوة")
+        return await user.send_message(chat_id, "💕 انضم الحساب المساعد بنجاح")
     except UserAlreadyParticipant:
-        return await user.send_message(chat_id, "✅ موجود يمعود")
+        return await user.send_message(chat_id, "💕 الحساب المساعد بالفعل موجود")
 
 
 @Client.on_message(
@@ -72,12 +72,12 @@ async def leave_chat(c :Client, m: Message):
         if chat_id in QUEUE:
             await remove_active_chat(chat_id)
             await user.leave_chat(chat_id)
-            return await c.send_message(chat_id, "✅ هوه مو صوجك صوج القواد الي اجا يغنيلكم باي")
+            return await c.send_message(chat_id, "جاري المغادره")
         else:
             await user.leave_chat(chat_id)
-            return await c.send_message(chat_id, "✅ وانيهم طالع وياه باي")
+            return await c.send_message(chat_id, "😂💕 اوكي باي")
     except UserNotParticipant:
-        return await c.send_message(chat_id, "🦴 غادر منزمان لتلح")
+        return await c.send_message(chat_id, "💕 غادر الحساب المساعد بالفعل")
 
 
 @Client.on_message(command(["leaveall", f"leaveall@{BOT_USERNAME}"]) & ~filters.edited)
